@@ -67,13 +67,6 @@ else 'under 5'
 end
 order by avgjobsatisfaction desc 
 
-
-select * from dbo.Employeeinformation
-select * from dbo.HREmployeeAttrition
-
-select avg(YearsAtCompany) as avgyearsatcompany from dbo.Employeeinformation
-
-
 --Combine 2 tables
 select info.yearswithcurrmanager, info.relationshipsatisfaction, info.performancerating, attri.attrition
 from dbo.employeeinformation info
@@ -113,6 +106,7 @@ on info.EmployeeNumber = attri.EmployeeNumber
 group by attri.department
 
 select * from dbo.DepartmentAttrition
+
 
 
 
